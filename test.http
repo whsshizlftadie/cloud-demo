@@ -1,0 +1,44 @@
+POST http://localhost:8088/api/user/pageList
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA2MjAzNDUsInVzZXJfbmFtZSI6IjE4OTY5NTUzMTcxIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiZmIxOWY3MWUtN2Q0Ny00M2I0LTkyMDEtNmRhOWRhNjA1OTRiIiwiY2xpZW50X2lkIjoibm9ybWFsLWFwcCIsInNjb3BlIjpbIlNDT1BFX1RSVVNUIl19.QijJMOoqa-oS78S3wtCjpEs1-A6XM5nheuUmisoEAgbKjxn06GRKR2FCCpdXoV8lDlUI4uGgrJdjrjzZwxK4dzKTVv42xBXLWFwjJMXTBEtGQvJIw5XBqRhMn0MayXNuTSqLpAo43jmWa0qBXEn3u153qV8PTuwvV2TAbCTTCFI
+Content-Type: application/json
+
+{
+  "pageNo": 3,
+  "pageSize": 1,
+  "keyword": ""
+}
+
+###
+GET http://localhost:8088/api/user/current
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA1MjI1OTMsInVzZXJfbmFtZSI6IjE4OTY5NTUzMTcxIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiZDUwYjU4ZDQtMzMyNy00YjViLWJkOTgtZTYzMTVjZjViYzdmIiwiY2xpZW50X2lkIjoibm9ybWFsLWFwcCIsInNjb3BlIjpbIlNDT1BFX1RSVVNUIl19.QHrD09so2kh5w5nABilpwvhYK_81sgGRoMo0DMX0FgG1-zqhLys4WfeMLqy9D7RmigVpAbIEc-kbLkFnS94qJYH5R1DgoHi2f1TQjLN00reKFDg8qUEcA6IxI9ihkRcsCb2L1NFqJPClKUaidl_4e7Aec-qjbuhzB2vUiY54nb0
+Accept: application/json
+
+###
+###
+GET http://localhost:8080/api/hello
+
+###
+POST http://localhost:8081/oauth/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&client_id=normal-app&client_secret=123456&username=18969553171&password=123456
+
+###
+GET http://localhost:8088/api/hello
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA0NzM2NjksInVzZXJfbmFtZSI6IjE4OTY5NTUzMTcxIiwiYXV0aG9yaXRpZXMiOlsiQURNSU4iXSwianRpIjoiNDk1ZTZlNDAtNTg0ZS00NWE4LTk5ZGEtOGJmMDMxYmUwMDcwIiwiY2xpZW50X2lkIjoibm9ybWFsLWFwcCIsInNjb3BlIjpbIlNDT1BFX1RSVVNUIl19.TGZdxDeagk2xQ41LL06m3FMrIPGg2T7YIlOLaNKiE6snjaEkr_rVnnt6qnfRy3blIVwmp0xdB6olmzZF9VL4U1eHQQE8PQ0R2hiKM84-PzpA9k5C3gJKtrvMqdk5mMw4R0J4FvqMCMzTswguMlYIE9xcr9wmh0AaOCvHWf92FsA
+
+###
+POST http://localhost:8081/oauth/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=refresh_token&refresh_token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiIxODk2OTU1MzE3MSIsInNjb3BlIjpbIlNDT1BFX1RSVVNUIl0sImF0aSI6IjMxNTk1M2RlLTQzOTktNDg4ZC1hZDhlLTY1NzNjMzZkODRhZSIsImV4cCI6MTU5MTI1NDIxNCwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJqdGkiOiI2OGQ0YzJlMi0zMThjLTRkZmYtODIzYi05ZGJiMTY2NmM0ZGEiLCJjbGllbnRfaWQiOiJub3JtYWwtYXBwIn0.bigWtjanNMJ_ZL-h3FKCqTBMTyngtafbishg6dnV1wl6CNSZmMYjbiM6msCedzfZ1XSq4Kidw3wcjmkvzygFWJcUPuwrNsg1Sa-lapQrcpudd0lQSAEvRslm27ZvFfOzPZmZhrLVF3FlBd_QTBEAHbUwWolrxVhouGu_pxZBpRA&client_id=normal-app&client_secret=123456
+
+###
+POST http://localhost:8088/auth/oauth/token
+#Authorization: Basic bm9ybWFsLWFwcDoxMjM0NTY=
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&client_id=normal-app&client_secret=123456&username=18969553171&password=123456
+
+###
+#&client_id=normal-app&client_secret=123456

@@ -1,0 +1,45 @@
+server:
+  port: 8088
+
+spring:
+  profiles:
+    active: dev
+
+  application:
+    name: gateway-service
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+
+    gateway:
+      routes:
+        - id: admin-route
+          uri: lb://upms-service
+          predicates:
+            - Path=/api/**
+          filters:
+            - StripPrefix=1
+        - id: auth-route
+          uri: lb://oauth2-service
+          predicates:
+            - Path=/auth/**
+          filters:
+            - StripPrefix=1
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+#security:
+#  ignoreUrls:
+#    - /auth/oauth/token/**
+#    - /auth/.well-known/jwks.json
+#    - /webjars/**

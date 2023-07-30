@@ -1,0 +1,28 @@
+server:
+  port: 8081
+
+spring:
+
+  profiles:
+    active: dev
+
+  application:
+    name: oauth2-service
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
