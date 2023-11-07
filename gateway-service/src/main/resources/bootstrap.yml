@@ -30,6 +30,12 @@ spring:
             - Path=/auth/**
           filters:
             - StripPrefix=1
+        - id: problem-route
+          uri: lb://problem-service
+          predicates:
+            - Path=/problem/**
+          filters:
+            - StripPrefix=1
 
 
 management:

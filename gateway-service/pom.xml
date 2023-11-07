@@ -24,6 +24,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
+        <!--security-->
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-config</artifactId>
@@ -60,6 +61,11 @@
             <artifactId>hutool-all</artifactId>
             <version>5.3.5</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.whs.oj</groupId>
+            <artifactId>commons</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

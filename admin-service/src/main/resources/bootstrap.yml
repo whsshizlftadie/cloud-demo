@@ -1,13 +1,10 @@
 server:
-  port: 8085
-
+  port: 8084
 spring:
   profiles:
     active: dev
-
   application:
     name: upms-service
-
   cloud:
     nacos:
       discovery:
@@ -15,10 +12,14 @@ spring:
       config:
         server-addr: localhost:8848
         file-extension: yaml
-
-
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+
+
+***REMOVED***
+***REMOVED***
+***REMOVED***
+***REMOVED***

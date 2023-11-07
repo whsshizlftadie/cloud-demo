@@ -3,6 +3,7 @@ package com.whs.oj.admin.controller;
 import com.whs.oj.admin.domain.OauthClientDetails;
 import com.whs.oj.admin.service.OauthClientDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,6 +17,7 @@ public class OauthClientDetailsController {
     private OauthClientDetailsService oauthClientDetailsService;
 
     @GetMapping("/client")
+    @Cacheable(value = "clientCache", key = "#ClientId")
     public OauthClientDetails clientDetails(@RequestParam String ClientId){
         OauthClientDetails clientDetails = oauthClientDetailsService.getById(ClientId);
         return clientDetails;

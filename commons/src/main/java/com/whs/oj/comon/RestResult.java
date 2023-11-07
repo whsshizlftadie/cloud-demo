@@ -1,7 +1,5 @@
 package com.whs.oj.comon;
 
-import org.springframework.http.HttpStatus;
-
 import java.io.Serializable;
 
 public final class RestResult<T> implements Serializable {
@@ -59,14 +57,14 @@ public final class RestResult<T> implements Serializable {
 
     public static <T> RestResult<T> success() {
         RestResult<T> result = new RestResult<T>();
-        result.setCode(HttpStatus.OK.value());
+        result.setCode(200);
         result.setMessage(SUCCESS_MESSAGE);
         return result;
     }
 
     public static <T> RestResult<T> success(T data) {
         RestResult<T> result = new RestResult<T>();
-        result.setCode(HttpStatus.OK.value());
+        result.setCode(200);
         result.setMessage(SUCCESS_MESSAGE);
         result.setData(data);
         return result;
@@ -74,7 +72,7 @@ public final class RestResult<T> implements Serializable {
 
     public static <T> RestResult<T> success(String message, T data) {
         RestResult<T> result = new RestResult<T>();
-        result.setCode(HttpStatus.OK.value());
+        result.setCode(200);
         result.setMessage(message);
         result.setData(data);
         return result;
@@ -82,14 +80,14 @@ public final class RestResult<T> implements Serializable {
 
     public static <T> RestResult<T> failure() {
         RestResult<T> result = new RestResult<T>();
-        result.setCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
+        result.setCode(500);
         result.setMessage(FAILURE_MESSAGE);
         return result;
     }
 
     public static <T> RestResult<T> failure(String message) {
         RestResult<T> result = new RestResult<T>();
-        result.setCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
+        result.setCode(500);
         result.setMessage(message);
         return result;
     }
@@ -112,10 +110,10 @@ public final class RestResult<T> implements Serializable {
     public static <T> RestResult<T> response(boolean success) {
         RestResult<T> result = new RestResult<T>();
         if (success) {
-            result.setCode(HttpStatus.OK.value());
+            result.setCode(200);
             result.setMessage(SUCCESS_MESSAGE);
         } else {
-            result.setCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
+            result.setCode(500);
             result.setMessage(FAILURE_MESSAGE);
         }
         return result;
@@ -124,11 +122,11 @@ public final class RestResult<T> implements Serializable {
     public static <T> RestResult<T> response(boolean success, T data) {
         RestResult<T> result = new RestResult<T>();
         if (success) {
-            result.setCode(HttpStatus.OK.value());
+            result.setCode(200);
             result.setMessage(SUCCESS_MESSAGE);
             result.setData(data);
         } else {
-            result.setCode(HttpStatus.INTERNAL_SERVER_ERROR.value());
+            result.setCode(500);
             result.setMessage(FAILURE_MESSAGE);
         }
         return result;

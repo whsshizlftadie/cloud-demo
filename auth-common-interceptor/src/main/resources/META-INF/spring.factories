@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.whs.oj.auth_interceptor.config.AuthInterceptor,\
+  com.whs.oj.auth_interceptor.config.WebConfig

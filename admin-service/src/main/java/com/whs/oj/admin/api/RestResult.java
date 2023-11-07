@@ -146,7 +146,7 @@ public final class RestResult<T> implements Serializable {
         return result;
     }
 
-    public static <T> RestResult page(Pager<T> page){
+    public static <T> RestResult page(Pager<T> page) {
         RestResult<List<T>> result = new RestResult<>();
         result.setCode(HttpStatus.OK.value());
         result.setData(page.getRecords());

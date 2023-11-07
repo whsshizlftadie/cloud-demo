@@ -8,10 +8,6 @@ public class UserUpdateRequest {
 
     private String username;
 
-
-    /**
-     *
-     */
     private String nickname;
 
     private Integer status;

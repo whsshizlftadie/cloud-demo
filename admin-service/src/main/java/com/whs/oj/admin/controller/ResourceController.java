@@ -1,6 +1,5 @@
 package com.whs.oj.admin.controller;
 
-import com.sun.corba.se.impl.encoding.IDLJavaSerializationInputStream;
 import com.whs.oj.admin.api.Pager;
 import com.whs.oj.admin.api.RestResult;
 import com.whs.oj.admin.domain.req.PageRequest;
@@ -9,7 +8,7 @@ import com.whs.oj.admin.service.ResourceDoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.xml.transform.Result;
+
 import java.util.List;
 
 @RestController
